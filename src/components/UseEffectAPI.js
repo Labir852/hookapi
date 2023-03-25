@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import GithubUsers from './GithubUsers';
-import NetflixSlider from './NetflixSlider';
 
 const UseEffectAPI = () => {
 
@@ -9,7 +8,6 @@ const UseEffectAPI = () => {
 
 
     const [users, setUsers] = useState([]);
-    const [NetflixData, setNetflixData] = useState([]);
     const [Loading, setLoading] = useState(true);
     const getUsers = async () => {
         try {
@@ -34,7 +32,7 @@ const UseEffectAPI = () => {
     }
   return (
     <>
-        <GithubUsers users={users}/>
+        <GithubUsers  users={users} key={users.id}/>
     </>
   )
 }
